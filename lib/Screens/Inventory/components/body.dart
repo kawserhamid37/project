@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:project/Screens/Inventory/components/category.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -21,11 +22,9 @@ class Body extends StatelessWidget {
         child: Container(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              CupertinoSearchTextField(
-                onChanged: (value){},
-                borderRadius: BorderRadius.circular(20),
-              ),
+            children: <Widget>[
+              Text('Categories',style: TextStyle(fontSize: 30),),
+              Category(),
             ],
           ),
         ),
