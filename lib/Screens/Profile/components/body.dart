@@ -31,13 +31,15 @@ class Body extends StatelessWidget {
       appBar: AppBar(
         elevation: 0.0,
         backgroundColor: Color(0xff555555),
-        leading: IconButton(
-          icon: Icon(
-            Icons.arrow_back,
-            color: Colors.white,
-          ),
-          onPressed: () {},
-        ),
+        // leading: IconButton(
+        //   icon: Icon(
+        //     Icons.arrow_back,
+        //     color: Colors.white,
+        //   ),
+        //   onPressed: () {
+        //     Navigator.pop(context);
+        //   },
+        // ),
       ),
       body: Stack(
         alignment: Alignment.center,
@@ -60,12 +62,6 @@ class Body extends StatelessWidget {
                     ),
                     textfield(
                       hintText: 'Phone Number',
-                    ),
-                    textfield(
-                      hintText: 'Address',
-                    ),
-                    textfield(
-                      hintText: 'Address',
                     ),
                     textfield(
                       hintText: 'Address',
@@ -107,7 +103,7 @@ class Body extends StatelessWidget {
                 child: Text(
                   "Profile Info",
                   style: TextStyle(
-                    fontSize: 35,
+                    fontSize: 25,
                     letterSpacing: 1.5,
                     color: Colors.white,
                     fontWeight: FontWeight.w600,

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:project/Screens/Inventory/inventory_page.dart';
 import 'package:project/Screens/Profile/profile_page.dart';
+import 'package:project/Screens/Project/project_page.dart';
 
 class Body extends StatelessWidget {
 
@@ -40,6 +41,15 @@ class Body extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => Inventory()),
+                );
+              },
+            ),
+            ListTile(
+              title: const Text('Project'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Project()),
                 );
               },
             ),
