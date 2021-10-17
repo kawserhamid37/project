@@ -11,7 +11,7 @@ class Body extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text(appTitle),
-      backgroundColor: Colors.orangeAccent,),
+      backgroundColor: Colors.orange,),
       drawer: Drawer(
         // Add a ListView to the drawer. This ensures the user can scroll
         // through the options in the drawer if there isn't enough vertical
@@ -22,7 +22,7 @@ class Body extends StatelessWidget {
           children: [
             const DrawerHeader(
               decoration: BoxDecoration(
-                color: Colors.orangeAccent,
+                color: Colors.orange,
               ),
               child: Text('Momen Real Estates LTD'),
             ),

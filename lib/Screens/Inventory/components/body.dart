@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:project/Screens/Inventory/components/category.dart';
-import 'package:project/Screens/Inventory/components/product.dart';
+import 'package:project/Screens/Inventory/components/products_grid.dart';
 
 class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    bool isSearching = false;
     return Scaffold(
         appBar: AppBar(
           elevation: 0.0,
@@ -19,7 +20,14 @@ class Body extends StatelessWidget {
               Navigator.pop(context);
             },
           ),
-          title: Text("Inventory"),
+          title: !isSearching ? Text("Inventory")
+              : Text('Searching Products'), //Text will be change for searching
+          actions: <Widget>[
+            IconButton(
+              icon: Icon(Icons.search),
+              onPressed: () {},
+            )
+          ],
         ),
         body: SafeArea(
           child: Container(
@@ -35,15 +43,6 @@ class Body extends StatelessWidget {
                 ),
                 SizedBox(height: 10.0),
                 Category(),
-                SizedBox(height: 10.0),
-                Center(
-                  child: Text(
-                    'Products',
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                  ),
-                ),
-                SizedBox(height: 10.0),
-                Product(),
               ],
             ),
           ),
