@@ -55,16 +55,16 @@ class Body extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     textfield(
-                      hintText: 'Name',
+                      hintText: 'Kawser Hamid',
                     ),
                     textfield(
-                      hintText: 'Verified Email',
+                      hintText: 'kawserhamid112@gmail.com',
                     ),
                     textfield(
-                      hintText: 'Phone Number',
+                      hintText: '01795097793',
                     ),
                     textfield(
-                      hintText: 'Address',
+                      hintText: 'House-26, Road-06, Sector-03, Uttara, Dhaka',
                     ),
                     Container(
                       height: 55,

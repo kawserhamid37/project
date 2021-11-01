@@ -1,21 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:project/Screens/Inventory/components/product.dart';
 class Products extends ChangeNotifier{
-
   List<Product> _items = [
     Product(
       id: 'p1',
-      title: 'Burger',
-      description: 'A Burger - A nice food!',
+      title: 'OPC Cement',
+      description: 'CIVIL!',
       price: 29.99,
-      imageUrl:'assets/images/burger.jpg',
+      imageUrl:'assets/icons/civil.jpg',
     ),
     Product(
       id: 'p2',
-      title: 'KFC',
-      description: 'A nice pair of Food.',
+      title: 'PPC Cement',
+      description: 'CIVIL',
       price: 59.99,
-      imageUrl:'assets/images/kfc.webp',
+      imageUrl:'assets/icons/electrical.jpg',
     ),
     Product(
       id: 'p3',
@@ -44,12 +43,16 @@ class Products extends ChangeNotifier{
     return [..._items];
   }
 
+  List<Product> get favoriteItems{
+    return _items.where((prodItem) => prodItem.isFavorite).toList();
+  }
+
   Product findById(String id) {
     return _items.firstWhere((prod) => prod.id == id);
   }
 
   void addFood(Product value) {
-    _items.add(value);
-    //notifyListeners();
+    //_items.add(value);
+    notifyListeners();
   }
 }

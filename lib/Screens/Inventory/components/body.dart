@@ -10,7 +10,7 @@ class Body extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           elevation: 0.0,
-          backgroundColor: Color(0xff555555),
+          backgroundColor: Color(0xFFD78F21),
           leading: IconButton(
             icon: Icon(
               Icons.arrow_back,

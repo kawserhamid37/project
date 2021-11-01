@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:project/Screens/Inventory/inventory_page.dart';
 import 'package:project/Screens/Profile/profile_page.dart';
 import 'package:project/Screens/Project/project_page.dart';
+import 'package:project/Screens/Inventory/components/orders_screen.dart';
 
 class Body extends StatelessWidget {
 
@@ -42,6 +43,16 @@ class Body extends StatelessWidget {
                   context,
                   MaterialPageRoute(builder: (context) => Inventory()),
                 );
+              },
+            ),
+            ListTile(
+              title: const Text('Order'),
+              onTap: () {
+                Navigator.of(context)
+                    .pushReplacementNamed(OrdersScreen.routeName);
+                // Navigator.push(
+                //   context,
+                //   MaterialPageRoute(builder: (context) => OrdersScreen()),
               },
             ),
             ListTile(
